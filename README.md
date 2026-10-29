@@ -15,7 +15,8 @@ collections, meshes, packed images and one armature with one rigid bone per chun
 
 ## Install
 
-1. Download `dist/gvz_pzz_importer-0.1.0.zip` (or build it, see below).
+1. Download **`gvz_pzz_importer-0.1.0.zip`** from the [latest release](https://github.com/JWitherin/gvz-pzz-importer/releases/latest)
+   (the same file is committed at `dist/gvz_pzz_importer-0.1.0.zip`, or build it yourself — see below).
 2. Blender: `Edit > Preferences > Add-ons > Install from Disk…` and pick the zip.
 3. Enable **GvZ PZZ Importer** in the add-on list.
 
@@ -74,6 +75,13 @@ python3 tools/package_addon.py
 ```
 
 The zip contains only `gvz_pzz_importer/__init__.py` and `gvz_pzz_importer/core.py`.
+
+The built zip is published as the release asset for its version tag
+(`v0.1.0` → `gvz_pzz_importer-0.1.0.zip`). Bump `bl_info` version, rebuild, then:
+
+```sh
+gh release create v<version> dist/gvz_pzz_importer-<version>.zip --title "GvZ PZZ Importer <version>"
+```
 
 ## Known caveats
 
